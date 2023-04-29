@@ -1,0 +1,28 @@
+---
+const { title, description, image, Content } = Astro.props;
+---
+
+<div class="container">
+  <a href="/" class="back-link"><p>&#8672; back to home </p></a>
+  <h1>{title}</h1>
+  <p>{description}</p>
+  <img class="image" src={image} src="" />
+  <Content />
+</div>
+
+<style>
+	.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 2rem;
+	}
+
+  .back-link {
+    align-self: flex-start;
+  }
+
+  .image {
+    width: 100%;
+  }
+</style>

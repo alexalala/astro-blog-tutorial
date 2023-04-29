@@ -1,0 +1,24 @@
+---
+const { title, description, image, url } = Astro.props;
+---
+
+<div class="post-card">
+	<h3>{title}</h3>
+	<img src={image} alt="" />
+	<p>{description}</p>
+	<a href={url}>Read More...</a>
+</div>
+
+<style>
+	.post-card {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding-bottom: 1.5rem;
+	}
+
+	img {
+		max-width: 35rem;
+	}
+</style>
